@@ -1,0 +1,29 @@
+<?php
+
+include("connect.php");
+$sender_name = $_POST['senname'];
+$sender_id = $_POST['senid'];
+
+$reciever_name = explode("_",$_POST['userselect']);
+
+$filename = $_POST['fselect'];
+
+$rid = $reciever_name[0];
+$rname = $reciever_name[1];
+
+
+mysql_query("INSERT INTO sharing(`sender_id`,`reciever_id`,`file_name`,`sender_name`,`reciever_name`) VALUES(
+'$sender_id','$rid','$filename','$sender_name','$rname'
+
+
+
+
+
+
+)");
+
+
+
+
+
+?>
